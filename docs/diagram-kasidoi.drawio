@@ -1,0 +1,1957 @@
+<mxfile host="app.diagrams.net" agent="Antigravity" pages="15">
+  <diagram id="tab1_erd" name="ERD - Database KASIDOI">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2250" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab1_erd_2" value="&lt;b&gt;DIAGRAM RELASI DATABASE (ERD) - SISTEM KEUANGAN KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Arsitektur 17 Entitas Tabel Relasional Fakultas Teknik UNTAD (Skema Bersih &amp;amp; Monokrom)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="750" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_3" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="50" y="90" width="240" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_4" value="&lt;b&gt;roles (Hak Akses)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_3">
+          <mxGeometry x="0" y="0" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_5" value="&lt;b&gt;id&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;role_name&lt;/b&gt; : VarChar(100)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_3">
+          <mxGeometry x="0" y="28" width="240" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="50" y="220" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_7" value="&lt;b&gt;users (Pengguna)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_6">
+          <mxGeometry x="0" y="0" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_8" value="&lt;b&gt;id&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;username&lt;/b&gt; : VarChar(100) &lt;b&gt;[UQ]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;name&lt;/b&gt; : VarChar(100)&lt;br/&gt;&lt;b&gt;email&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;password&lt;/b&gt; : VarChar(100)&lt;br/&gt;&lt;b&gt;status&lt;/b&gt; : VarChar(100)&lt;br/&gt;&lt;b&gt;role_id&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_6">
+          <mxGeometry x="0" y="28" width="240" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="90" width="250" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_10" value="&lt;b&gt;laporans (Tahun Anggaran)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_9">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_11" value="&lt;b&gt;id_laporan&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_user&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;nama_laporan&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;tahun&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;pagu_boptn&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;sisa_pagu_boptn&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;pagu_blu&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;sisa_pagu_blu&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;status&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime&lt;br/&gt;&lt;b&gt;updatedAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_9">
+          <mxGeometry x="0" y="28" width="250" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_12" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="390" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_13" value="&lt;b&gt;total_pagus (Rekapitulasi Pagu)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_12">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_14" value="&lt;b&gt;id_pagu&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_laporan&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;sisa_pagu&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;pagu_awal&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;pagu_revisi_boptn&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;pagu_revisi_blu&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;total_realisasi&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_12">
+          <mxGeometry x="0" y="28" width="250" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_15" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="660" y="90" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_16" value="&lt;b&gt;rabs (Rencana Anggaran Biaya)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_15">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_17" value="&lt;b&gt;id_rab&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_user&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_laporan&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;nama_rab&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_15">
+          <mxGeometry x="0" y="28" width="250" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_18" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="660" y="280" width="270" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_19" value="&lt;b&gt;kode_uang_masters (Alokasi Belanja)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_18">
+          <mxGeometry x="0" y="0" width="270" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_20" value="&lt;b&gt;id_master&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_laporan&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_user&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_rab&lt;/b&gt; : Int? &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_2&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_3&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_4&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_5&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_6&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_7&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;program_kerja&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;pagu_awal&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;pagu_revisi&lt;/b&gt; : Int?&lt;br/&gt;&lt;b&gt;total_realisasi&lt;/b&gt; : Int?&lt;br/&gt;&lt;b&gt;sisa_pagu&lt;/b&gt; : Int?&lt;br/&gt;&lt;b&gt;realisasi&lt;/b&gt; : Int?" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_18">
+          <mxGeometry x="0" y="28" width="270" height="352" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_21" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="660" y="710" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_22" value="&lt;b&gt;rpds (Penarikan Dana)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_21">
+          <mxGeometry x="0" y="0" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_23" value="&lt;b&gt;id_rpd&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_6&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_user&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_laporan&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;status&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;uang_diambil&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;tanggal_rpd&lt;/b&gt; : DateTime&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_21">
+          <mxGeometry x="0" y="28" width="260" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_24" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="710" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_25" value="&lt;b&gt;panjars (Pencairan Panjar)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_24">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_26" value="&lt;b&gt;id_panjar&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_rpd&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;nominal_panjar&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;keterangan&lt;/b&gt; : String?&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_24">
+          <mxGeometry x="0" y="28" width="250" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_27" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="660" y="960" width="260" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_28" value="&lt;b&gt;lpjs (Pertanggungjawaban)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_27">
+          <mxGeometry x="0" y="0" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_29" value="&lt;b&gt;id_lpj&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_6&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_laporan&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_rpd&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;nominal&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;keterangan&lt;/b&gt; : String?&lt;br/&gt;&lt;b&gt;src_lpj&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;status&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_27">
+          <mxGeometry x="0" y="28" width="260" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_30" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="90" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_31" value="&lt;b&gt;levels_1 (Program)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_30">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_32" value="&lt;b&gt;id_level_1&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_30">
+          <mxGeometry x="0" y="28" width="250" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_33" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="240" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_34" value="&lt;b&gt;levels_2 (Kegiatan)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_33">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_35" value="&lt;b&gt;id_level_2&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_33">
+          <mxGeometry x="0" y="28" width="250" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_36" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="410" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_37" value="&lt;b&gt;levels_3 (KRO)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_36">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_38" value="&lt;b&gt;id_level_3&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_2&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_36">
+          <mxGeometry x="0" y="28" width="250" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_39" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="590" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_40" value="&lt;b&gt;levels_4 (RO)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_39">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_41" value="&lt;b&gt;id_level_4&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1..3&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_39">
+          <mxGeometry x="0" y="28" width="250" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_42" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="780" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_43" value="&lt;b&gt;levels_5 (Komponen)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_42">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_44" value="&lt;b&gt;id_level_5&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1..4&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_42">
+          <mxGeometry x="0" y="28" width="250" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_45" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="980" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_46" value="&lt;b&gt;levels_6 (Sub Komponen)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_45">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_47" value="&lt;b&gt;id_level_6&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1..5&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;kode_uang&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_45">
+          <mxGeometry x="0" y="28" width="250" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_48" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1010" y="1200" width="270" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_49" value="&lt;b&gt;levels_7 (Item Belanja)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_48">
+          <mxGeometry x="0" y="0" width="270" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_50" value="&lt;b&gt;id_level_7&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_level_1..6&lt;/b&gt; : Int &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;id_product&lt;/b&gt; : Int? &lt;b&gt;[FK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : VarChar(255)&lt;br/&gt;&lt;b&gt;rincian_kuantiti&lt;/b&gt; : Int?&lt;br/&gt;&lt;b&gt;satuan_kuantiti&lt;/b&gt; : String?&lt;br/&gt;&lt;b&gt;rincian_pemakaian&lt;/b&gt; : Int?&lt;br/&gt;&lt;b&gt;satuan_pemakaian&lt;/b&gt; : String?&lt;br/&gt;&lt;b&gt;harga_satuan&lt;/b&gt; : Int?&lt;br/&gt;&lt;b&gt;harga_total&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;nilai_tkdn&lt;/b&gt; : String?" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_48">
+          <mxGeometry x="0" y="28" width="270" height="282" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_51" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1360" y="1200" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_52" value="&lt;b&gt;products (Standar SBU Produk)&lt;/b&gt;" style="rounded=1;arcSize=8;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;html=1;" vertex="1" parent="tab1_erd_51">
+          <mxGeometry x="0" y="0" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_53" value="&lt;b&gt;id_product&lt;/b&gt; : Int &lt;b&gt;[PK]&lt;/b&gt;&lt;br/&gt;&lt;b&gt;nama&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;harga&lt;/b&gt; : Int&lt;br/&gt;&lt;b&gt;satuan_kuantiti&lt;/b&gt; : String&lt;br/&gt;&lt;b&gt;createdAt&lt;/b&gt; : DateTime" style="rounded=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#9CA3AF;fontColor=#111827;fontSize=10;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=6;spacingBottom=6;whiteSpace=wrap;html=1;strokeWidth=1.2;" vertex="1" parent="tab1_erd_51">
+          <mxGeometry x="0" y="28" width="250" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_54" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_5" target="tab1_erd_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_55" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_8" target="tab1_erd_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_56" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_8" target="tab1_erd_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_57" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_8" target="tab1_erd_22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_58" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_8" target="tab1_erd_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_59" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_11" target="tab1_erd_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_60" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_11" target="tab1_erd_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_61" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_11" target="tab1_erd_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_62" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_11" target="tab1_erd_22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_63" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_11" target="tab1_erd_28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_64" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_17" target="tab1_erd_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_65" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_32" target="tab1_erd_34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_66" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_35" target="tab1_erd_37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_67" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_38" target="tab1_erd_40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_68" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_41" target="tab1_erd_43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_69" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_44" target="tab1_erd_46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_70" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_47" target="tab1_erd_49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_71" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_53" target="tab1_erd_49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_72" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_47" target="tab1_erd_22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_73" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_47" target="tab1_erd_28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_74" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_50" target="tab1_erd_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_75" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_23" target="tab1_erd_25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab1_erd_76" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=ERmand;startArrow=ERone;fontSize=10;fontColor=#111827;" edge="1" parent="1" source="tab1_erd_23" target="tab1_erd_28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab2_seq_auth" name="Seq - Autentikasi &amp; Reset Password OTP">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1650" pageHeight="1520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab2_seq_auth_2" value="&lt;b&gt;SEQUENCE DIAGRAM: AUTENTIKASI &amp; RESET PASSWORD OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Masuk Akun Pengguna, Keamanan Sesi, dan Pemulihan Akun via OTP Email&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_3" value="&lt;b&gt;Skenario 1: Proses Masuk ke Sistem (Login)&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="155" width="1530" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_4" value="&lt;b&gt;Skenario 2: Pemulihan Kata Sandi (Lupa Password via OTP Email)&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="450" width="1530" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_5" value="&lt;b&gt;Pengguna (User)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Unit Kerja / Keuangan&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab2_seq_auth_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_7" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Halaman Login &amp; Formulir&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab2_seq_auth_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_9" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pusat Pemroses Bisnis&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab2_seq_auth_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_11" value="&lt;b&gt;Layanan Email OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pengiriman Kode Keamanan&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_12" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab2_seq_auth_11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_13" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyimpanan Akun &amp; Profil&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab2_seq_auth_14" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab2_seq_auth_13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="135" as="sourcePoint" />
+            <mxPoint x="1170" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_15" value="1. Memasukkan Nama Pengguna (Username) dan Kata Sandi" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_16" value="2. Mengirimkan data kredensial login pengguna" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="218" as="sourcePoint" />
+            <mxPoint x="630" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_17" value="3. Memeriksa keberadaan akun dan status aktif pengguna" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="266" as="sourcePoint" />
+            <mxPoint x="1170" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_18" value="4. Mengonfirmasi akun terdaftar dan berstatus aktif" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="314" as="sourcePoint" />
+            <mxPoint x="630" y="314" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_19" value="5. Memverifikasi kecocokan sandi &amp; membuat sesi login aman" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="362" as="sourcePoint" />
+            <mxPoint x="630" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="362" />
+              <mxPoint x="665" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_20" value="6. Konfirmasi login sukses dan memberikan akses sesi pengguna" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="410" as="sourcePoint" />
+            <mxPoint x="360" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_21" value="7. Mengarahkan pengguna ke Dashboard sesuai hak akses (Role)" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="458" as="sourcePoint" />
+            <mxPoint x="90" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_22" value="8. Memilih menu 'Lupa Sandi' &amp; memasukkan alamat email terdaftar" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="506" as="sourcePoint" />
+            <mxPoint x="360" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_23" value="9. Mengajukan permohonan pengiriman kode keamanan OTP" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="554" as="sourcePoint" />
+            <mxPoint x="630" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_24" value="10. Memeriksa kecocokan alamat email pengguna" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="602" as="sourcePoint" />
+            <mxPoint x="1170" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_25" value="11. Mengonfirmasi alamat email terdaftar dan valid" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="650" as="sourcePoint" />
+            <mxPoint x="630" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_26" value="12. Membuat kode OTP 6-digit &amp; meminta pengiriman surat elektronik" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="698" as="sourcePoint" />
+            <mxPoint x="900" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_27" value="13. Mengirimkan email berisi 6-digit kode OTP ke pengguna" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="746" as="sourcePoint" />
+            <mxPoint x="90" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_28" value="14. Mengetikkan kode OTP yang diterima dan kata sandi baru" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="794" as="sourcePoint" />
+            <mxPoint x="360" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_29" value="15. Mengirimkan kode OTP dan kata sandi baru untuk diverifikasi" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="842" as="sourcePoint" />
+            <mxPoint x="630" y="842" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_30" value="16. Memvalidasi kebenaran kode OTP &amp; memastikan belum kedaluwarsa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="890" as="sourcePoint" />
+            <mxPoint x="630" y="918" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="890" />
+              <mxPoint x="665" y="918" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_31" value="17. Memperbarui kata sandi baru pengguna ke database" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="938" as="sourcePoint" />
+            <mxPoint x="1170" y="938" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_32" value="18. Mengonfirmasi kata sandi berhasil diperbarui" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="986" as="sourcePoint" />
+            <mxPoint x="630" y="986" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_33" value="19. Memberitahukan bahwa pembaruan sandi berhasil" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="1034" as="sourcePoint" />
+            <mxPoint x="360" y="1034" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab2_seq_auth_34" value="20. Menampilkan notifikasi sukses &amp; kembali ke halaman login" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="1082" as="sourcePoint" />
+            <mxPoint x="90" y="1082" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab3_seq_laporan" name="Seq - Setup Laporan &amp; Pagu Anggaran">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1650" pageHeight="1272" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab3_seq_laporan_2" value="&lt;b&gt;SEQUENCE DIAGRAM: SETUP LAPORAN &amp; PAGU ANGGARAN&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Perencanaan Anggaran Tahunan Fakultas, Penetapan Pagu, dan Tata Kelola Revisi&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_3" value="&lt;b&gt;Skenario 1: Pembentukan Laporan Tahun Anggaran Baru&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="155" width="1530" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_4" value="&lt;b&gt;Skenario 2: Penyesuaian Plafon Anggaran (Revisi Pagu BOPTN &amp; BLU)&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="460" width="1530" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_5" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pengelola Anggaran Fakultas&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab3_seq_laporan_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_7" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Modul Laporan Anggaran&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab3_seq_laporan_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_9" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pemroses Alokasi &amp; Rekap&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab3_seq_laporan_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_11" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyimpanan Pagu &amp; Laporan&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_12" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab3_seq_laporan_11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_13" value="1. Membuka menu Laporan dan memilih 'Tambah Anggaran Baru'" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_14" value="2. Menginput: Nama Laporan, Tahun, Plafon Pagu BOPTN &amp; Pagu BLU" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="218" as="sourcePoint" />
+            <mxPoint x="360" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_15" value="3. Mengirim data pembentukan anggaran fakultas baru" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="266" as="sourcePoint" />
+            <mxPoint x="630" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_16" value="4. Memvalidasi kelengkapan data &amp; memastikan tahun belum terdaftar" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="314" as="sourcePoint" />
+            <mxPoint x="630" y="342" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="314" />
+              <mxPoint x="665" y="342" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_17" value="5. Menyimpan laporan anggaran baru dan inisialisasi status AKTIF" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="362" as="sourcePoint" />
+            <mxPoint x="900" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_18" value="6. Mengonfirmasi laporan anggaran baru berhasil disimpan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="410" as="sourcePoint" />
+            <mxPoint x="630" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_19" value="7. Mengembalikan data laporan aktif dan rincian alokasi awal" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="458" as="sourcePoint" />
+            <mxPoint x="360" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_20" value="8. Menampilkan daftar anggaran tahunan yang siap digunakan fakultas" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="506" as="sourcePoint" />
+            <mxPoint x="90" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_21" value="9. Memilih opsi 'Revisi Pagu' pada tahun anggaran berjalan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="554" as="sourcePoint" />
+            <mxPoint x="360" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_22" value="10. Memasukkan nilai pagu perubahan (Revisi BOPTN / Revisi BLU)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="602" as="sourcePoint" />
+            <mxPoint x="360" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_23" value="11. Mengajukan perubahan plafon anggaran belanja fakultas" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="650" as="sourcePoint" />
+            <mxPoint x="630" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_24" value="12. Menghitung ulang total pagu, serapan berjalan, dan sisa pagu" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="698" as="sourcePoint" />
+            <mxPoint x="630" y="726" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="698" />
+              <mxPoint x="665" y="726" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_25" value="13. Menyimpan nilai pagu revisi ke database laporan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="746" as="sourcePoint" />
+            <mxPoint x="900" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_26" value="14. Mengonfirmasi data pagu revisi tersimpan dengan benar" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="794" as="sourcePoint" />
+            <mxPoint x="630" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_27" value="15. Memberikan status bahwa pagu revisi telah aktif" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="842" as="sourcePoint" />
+            <mxPoint x="360" y="842" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab3_seq_laporan_28" value="16. Memperbarui tabel rekapitulasi pagu revisi &amp; serapan real-time" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="890" as="sourcePoint" />
+            <mxPoint x="90" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab4_seq_rkakl" name="Seq - Setup RKAKL &amp; Standar Biaya Masukan">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1650" pageHeight="1272" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab4_seq_rkakl_2" value="&lt;b&gt;SEQUENCE DIAGRAM: SETUP RKAKL &amp; STANDAR BIAYA MASUKAN&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Pengelolaan Katalog Biaya Standar dan Penyusunan 7 Tingkatan Rekening Belanja&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_3" value="&lt;b&gt;Skenario 1: Pengelolaan Katalog Standar Biaya Masukan (SBU Produk)&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="155" width="1530" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_4" value="&lt;b&gt;Skenario 2: Penyusunan Struktur Berjenjang Rekening Belanja (Level 1 s/d 7)&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="400" width="1530" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_5" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pengelola Master Data Anggaran&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab4_seq_rkakl_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_7" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Modul RKAKL &amp; Katalog SBU&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab4_seq_rkakl_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_9" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pemroses Struktur &amp; Hierarki&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab4_seq_rkakl_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_11" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyimpanan Pohon Rekening&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_12" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab4_seq_rkakl_11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_13" value="1. Menginput data standar acuan biaya (Nama Barang, Satuan, Harga Acuan)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_14" value="2. Meneruskan data barang standar ke sistem" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="218" as="sourcePoint" />
+            <mxPoint x="630" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_15" value="3. Menyimpan data produk acuan ke katalog standar biaya (SBU)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="266" as="sourcePoint" />
+            <mxPoint x="900" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_16" value="4. Mengonfirmasi barang acuan standar tersimpan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="314" as="sourcePoint" />
+            <mxPoint x="630" y="314" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_17" value="5. Menampilkan katalog standar biaya yang telah diperbarui" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="362" as="sourcePoint" />
+            <mxPoint x="360" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_18" value="6. Menginput kode rekening berjenjang: Program (Lvl 1) s/d Sub Komponen (Lvl 6)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="410" as="sourcePoint" />
+            <mxPoint x="360" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_19" value="7. Mengirimkan struktur hierarki kode rekening ke sistem" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="458" as="sourcePoint" />
+            <mxPoint x="630" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_20" value="8. Membangun relasi berjenjang (induk-anak) bertingkat 6 level" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="506" as="sourcePoint" />
+            <mxPoint x="900" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_21" value="9. Mengonfirmasi seluruh hierarki rekening 1–6 berhasil dicatat" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="554" as="sourcePoint" />
+            <mxPoint x="630" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_22" value="10. Mengisi rincian akun belanja (Level 7) dengan memilih SBU &amp; kuantiti" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="602" as="sourcePoint" />
+            <mxPoint x="360" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_23" value="11. Mengirimkan rincian volume dan satuan kebutuhan barang" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="650" as="sourcePoint" />
+            <mxPoint x="630" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_24" value="12. Menghitung total biaya otomatis (Kuantiti x Harga Satuan SBU)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="698" as="sourcePoint" />
+            <mxPoint x="630" y="726" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="698" />
+              <mxPoint x="665" y="726" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_25" value="13. Menyimpan rincian item belanja Level 7 ke database" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="746" as="sourcePoint" />
+            <mxPoint x="900" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_26" value="14. Mengonfirmasi rincian belanja berhasil disimpan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="794" as="sourcePoint" />
+            <mxPoint x="630" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_27" value="15. Mengonfirmasi seluruh pohon anggaran RKAKL siap digunakan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="842" as="sourcePoint" />
+            <mxPoint x="360" y="842" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab4_seq_rkakl_28" value="16. Menampilkan bagan pohon rekening anggaran fakultas secara lengkap" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="890" as="sourcePoint" />
+            <mxPoint x="90" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab5_seq_rab" name="Seq - Pengajuan RAB Unit Kerja">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1650" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab5_seq_rab_2" value="&lt;b&gt;SEQUENCE DIAGRAM: PENGAJUAN RAB UNIT KERJA&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Perencanaan Anggaran Biaya (RAB) oleh Jurusan/Prodi dan Penautan Rekening Belanja&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab5_seq_rab_3" value="&lt;b&gt;Unit Kerja / Prodi&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pengusul Anggaran Kegiatan&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab5_seq_rab_4" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab5_seq_rab_3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_5" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Modul Pengajuan RAB&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab5_seq_rab_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab5_seq_rab_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_7" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pemvalidasi Alokasi Pagu&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab5_seq_rab_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab5_seq_rab_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_9" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyimpanan Dokumen RAB&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab5_seq_rab_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab5_seq_rab_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_11" value="1. Memilih Tahun Anggaran aktif yang sedang berjalan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_12" value="2. Memilih 'Buat RAB Baru' dan menginput Nama Kegiatan yang direncanakan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="218" as="sourcePoint" />
+            <mxPoint x="360" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_13" value="3. Mengirimkan permohonan pembentukan dokumen RAB kegiatan baru" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="266" as="sourcePoint" />
+            <mxPoint x="630" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_14" value="4. Mencatat identitas RAB baru milik Unit Kerja ke database" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="314" as="sourcePoint" />
+            <mxPoint x="900" y="314" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_15" value="5. Mengonfirmasi dokumen RAB baru berhasil dibuat" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="362" as="sourcePoint" />
+            <mxPoint x="630" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_16" value="6. Memilih kode rekening anggaran (Level 1–7) dan mengisi pagu yang diusulkan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="410" as="sourcePoint" />
+            <mxPoint x="360" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_17" value="7. Mengirimkan rincian usulan anggaran belanja kegiatan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="458" as="sourcePoint" />
+            <mxPoint x="630" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_18" value="8. Memeriksa ketersediaan plafon pagu agar tidak melebihi anggaran fakultas" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="506" as="sourcePoint" />
+            <mxPoint x="630" y="534" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="506" />
+              <mxPoint x="665" y="534" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_19" value="9. Mengaitkan rincian kode anggaran belanja dengan dokumen RAB kegiatan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="554" as="sourcePoint" />
+            <mxPoint x="900" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_20" value="10. Mengonfirmasi rincian alokasi anggaran belanja berhasil disimpan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="602" as="sourcePoint" />
+            <mxPoint x="630" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_21" value="11. Memberitahukan bahwa penyusunan RAB telah selesai dan tersimpan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="650" as="sourcePoint" />
+            <mxPoint x="360" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab5_seq_rab_22" value="12. Menampilkan dokumen RAB lengkap beserta total kalkulasi anggaran siap pakai" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="698" as="sourcePoint" />
+            <mxPoint x="90" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab6_seq_rpd" name="Seq - Pengajuan RPD &amp; Monitoring Kalender">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1650" pageHeight="1272" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab6_seq_rpd_2" value="&lt;b&gt;SEQUENCE DIAGRAM: PENGAJUAN RPD &amp; MONITORING KALENDER&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Permohonan Jadwal Penarikan Dana, Verifikasi Kuota Saldo, dan Sinkronisasi Kalender Kas&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_3" value="&lt;b&gt;Unit Kerja / Pemohon&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pelaksana Kegiatan Belanja&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_4" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab6_seq_rpd_3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_5" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Modul RPD &amp; Kalender Penarikan&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab6_seq_rpd_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_7" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pemverifikasi Kuota &amp; Jadwal&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab6_seq_rpd_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_9" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyimpanan Agenda Kas&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab6_seq_rpd_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_11" value="1. Membuka menu RPD &amp; memilih Sub Komponen (Level 6) yang akan ditarik" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_12" value="2. Memeriksa sisa saldo pagu yang masih terbuka pada rekening tersebut" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="218" as="sourcePoint" />
+            <mxPoint x="630" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_13" value="3. Mengambil sisa saldo anggaran belanja dari database" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="266" as="sourcePoint" />
+            <mxPoint x="900" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_14" value="4. Memberikan informasi sisa pagu anggaran yang masih dapat ditarik" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="314" as="sourcePoint" />
+            <mxPoint x="630" y="314" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_15" value="5. Menampilkan batas maksimal nominal penarikan dana kepada pemohon" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="362" as="sourcePoint" />
+            <mxPoint x="360" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_16" value="6. Mengisi nominal dana yang dibutuhkan &amp; memilih tanggal rencana penarikan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="410" as="sourcePoint" />
+            <mxPoint x="360" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_17" value="7. Mengirimkan permohonan Rencana Penarikan Dana (RPD) ke sistem" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="458" as="sourcePoint" />
+            <mxPoint x="630" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_18" value="8. Memverifikasi bahwa dana yang diminta tidak melampaui sisa pagu rekening" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="506" as="sourcePoint" />
+            <mxPoint x="630" y="534" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="665" y="506" />
+              <mxPoint x="665" y="534" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_19" value="9. Mencatat pengajuan RPD dengan status awal: 'MENUNGGU' (WAITING)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="554" as="sourcePoint" />
+            <mxPoint x="900" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_20" value="10. Mengonfirmasi pengajuan RPD berhasil disimpan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="602" as="sourcePoint" />
+            <mxPoint x="630" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_21" value="11. Memberitahukan bahwa jadwal RPD telah berhasil dicatat" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="650" as="sourcePoint" />
+            <mxPoint x="360" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_22" value="12. Meminta pembaruan agenda kalender kas penarikan dana tahun berjalan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="698" as="sourcePoint" />
+            <mxPoint x="630" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_23" value="13. Memuat seluruh jadwal penarikan dana aktif di fakultas" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="746" as="sourcePoint" />
+            <mxPoint x="900" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_24" value="14. Mengembalikan daftar agenda penarikan dana terjadwal" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="794" as="sourcePoint" />
+            <mxPoint x="630" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_25" value="15. Mengirimkan agenda kalender serta menghitung hari menuju pencairan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="842" as="sourcePoint" />
+            <mxPoint x="360" y="842" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab6_seq_rpd_26" value="16. Menampilkan jadwal pada Kalender Kas &amp; menyalakan status 'Saatnya Pengambilan Dana'" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="890" as="sourcePoint" />
+            <mxPoint x="90" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab7_seq_panjar" name="Seq - Pencairan Panjar &amp; Otorisasi OTP">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1800" pageHeight="1210" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab7_seq_panjar_2" value="&lt;b&gt;SEQUENCE DIAGRAM: PENCAIRAN PANJAR &amp; OTORISASI OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Pencairan Dana Kas Bertahap Dilengkapi Otorisasi Keamanan Dua Faktor (Email OTP)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_3" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Bendahara Pengeluaran&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_4" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab7_seq_panjar_3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_5" value="&lt;b&gt;Unit Kerja (Penerima)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penerima Pencairan Dana&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab7_seq_panjar_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_7" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Modul Panjar &amp; Verifikasi OTP&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab7_seq_panjar_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_9" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pemverifikasi Keamanan OTP&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab7_seq_panjar_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_11" value="&lt;b&gt;Layanan Email OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pengiriman Kode Rahasia&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_12" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab7_seq_panjar_11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="135" as="sourcePoint" />
+            <mxPoint x="1170" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_13" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pencatatan Buku Kas Panjar&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_14" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab7_seq_panjar_13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440" y="135" as="sourcePoint" />
+            <mxPoint x="1440" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_15" value="1. Memilih permohonan RPD terdaftar &amp; mengklik tombol 'Cairkan Panjar'" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="630" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_16" value="2. Memasukkan jumlah dana panjar yang disetujui serta keterangan pencairan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="218" as="sourcePoint" />
+            <mxPoint x="630" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_17" value="3. Mengajukan penerbitan kode pengamanan OTP untuk otorisasi pencairan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="266" as="sourcePoint" />
+            <mxPoint x="900" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_18" value="4. Mengambil alamat email resmi milik Unit Kerja pemohon penarikan dana" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="314" as="sourcePoint" />
+            <mxPoint x="1440" y="314" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_19" value="5. Memberikan alamat email perwakilan Unit Kerja yang sah" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440" y="362" as="sourcePoint" />
+            <mxPoint x="900" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_20" value="6. Membuat kode OTP 6-digit &amp; mengirimkannya ke email Unit Kerja" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="410" as="sourcePoint" />
+            <mxPoint x="1170" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_21" value="7. Mengirimkan notifikasi email berisi kode rahasia OTP kepada pemohon" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="458" as="sourcePoint" />
+            <mxPoint x="360" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_22" value="8. Menyerahkan kode OTP resmi kepada Staf Keuangan di loket pencairan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="506" as="sourcePoint" />
+            <mxPoint x="90" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_23" value="9. Mengetikkan kode OTP tersebut pada form jendela konfirmasi pencairan" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="554" as="sourcePoint" />
+            <mxPoint x="630" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_24" value="10. Mengirimkan kode OTP untuk diperiksa keabsahan dan masa berlakunya" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="602" as="sourcePoint" />
+            <mxPoint x="900" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_25" value="11. Memvalidasi kecocokan kode OTP &amp; memastikan belum kedaluwarsa" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="650" as="sourcePoint" />
+            <mxPoint x="900" y="678" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="935" y="650" />
+              <mxPoint x="935" y="678" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_26" value="12. Membukukan pencairan panjar dana ke dalam catatan riwayat kas" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="698" as="sourcePoint" />
+            <mxPoint x="1440" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_27" value="13. Mengonfirmasi transaksi panjar resmi tersimpan di database" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440" y="746" as="sourcePoint" />
+            <mxPoint x="900" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_28" value="14. Memberikan konfirmasi bahwa pencairan panjar telah sah dan disetujui" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="794" as="sourcePoint" />
+            <mxPoint x="630" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab7_seq_panjar_29" value="15. Menampilkan kuitansi pencairan dana panjar siap cetak &amp; serah terima dana" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="842" as="sourcePoint" />
+            <mxPoint x="90" y="842" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab8_seq_lpj" name="Seq - Pengajuan &amp; Verifikasi LPJ">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1650" pageHeight="1334" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab8_seq_lpj_2" value="&lt;b&gt;SEQUENCE DIAGRAM: PENGAJUAN &amp; VERIFIKASI LPJ&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Alur Penyerahan Berkas Pertanggungjawaban dan Rekonsiliasi Otomatis Saldo Realisasi Belanja&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_3" value="&lt;b&gt;Skenario 1: Penyerahan Bukti LPJ oleh Unit Kerja&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="155" width="1530" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_4" value="&lt;b&gt;Skenario 2: Pemeriksaan &amp; Pengesahan Serapan Realisasi Anggaran&lt;/b&gt;" style="shape=folder;tabWidth=110;tabHeight=24;tabPosition=left;fillColor=#F9FAFB;strokeColor=#9CA3AF;dashed=1;fontSize=10;fontStyle=1;fontColor=#374151;align=left;spacingLeft=12;verticalAlign=top;spacingTop=6;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="450" width="1530" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_5" value="&lt;b&gt;Unit Kerja / Pelaksana&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyusun Bukti Belanja&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_6" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab8_seq_lpj_5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="135" as="sourcePoint" />
+            <mxPoint x="90" y="1284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_7" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Pemeriksa / Verifikator LPJ&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#111827;strokeColor=#000000;fontColor=#FFFFFF;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_8" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab8_seq_lpj_7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="135" as="sourcePoint" />
+            <mxPoint x="360" y="1284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_9" value="&lt;b&gt;Antarmuka Web KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Modul LPJ &amp; Serapan Anggaran&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_10" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab8_seq_lpj_9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="135" as="sourcePoint" />
+            <mxPoint x="630" y="1284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_11" value="&lt;b&gt;Sistem Aplikasi KASIDOI&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Rekonsiliasi Realisasi Pagu&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_12" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab8_seq_lpj_11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="135" as="sourcePoint" />
+            <mxPoint x="900" y="1284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_13" value="&lt;b&gt;Pusat Data (Database)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;&quot;&gt;Penyimpanan Saldo &amp; Realisasi&lt;/span&gt;" style="rounded=1;arcSize=10;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="90" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_14" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9CA3AF;strokeWidth=1.5;html=1;" edge="1" parent="1" source="tab8_seq_lpj_13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="135" as="sourcePoint" />
+            <mxPoint x="1170" y="1284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_15" value="1. Memilih kegiatan RPD yang dananya telah cair &amp; memilih 'Unggah LPJ'" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="170" as="sourcePoint" />
+            <mxPoint x="630" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_16" value="2. Memasukkan nominal riil belanja &amp; mengunggah berkas bukti pengeluaran (PDF)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="218" as="sourcePoint" />
+            <mxPoint x="630" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_17" value="3. Mengirimkan dokumen bukti pengeluaran beserta nominal belanja riil" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="266" as="sourcePoint" />
+            <mxPoint x="900" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_18" value="4. Menyimpan dokumen bukti fisik secara aman di arsip berkas sistem" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#111827;strokeWidth=1.2;endArrow=block;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="314" as="sourcePoint" />
+            <mxPoint x="900" y="342" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="935" y="314" />
+              <mxPoint x="935" y="342" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_19" value="5. Mencatat laporan LPJ dengan status awal: 'MENUNGGU VERIFIKASI' (WAITING)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="362" as="sourcePoint" />
+            <mxPoint x="1170" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_20" value="6. Mengonfirmasi berkas LPJ berhasil dicatat ke dalam database" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="410" as="sourcePoint" />
+            <mxPoint x="900" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_21" value="7. Memberitahukan bahwa LPJ sukses terkirim dan menunggu verifikasi" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="458" as="sourcePoint" />
+            <mxPoint x="630" y="458" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_22" value="8. Menampilkan tanda terima unggah LPJ dan status proses pemeriksaan" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="506" as="sourcePoint" />
+            <mxPoint x="90" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_23" value="9. Membuka daftar berkas LPJ masuk dan memeriksa kuitansi pengeluaran" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="554" as="sourcePoint" />
+            <mxPoint x="630" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_24" value="10. Menyetujui pertanggungjawaban dana (Mengubah status menjadi 'DISETUJUI' / DONE)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="602" as="sourcePoint" />
+            <mxPoint x="630" y="602" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_25" value="11. Mengirimkan perintah pengesahan LPJ yang telah terverifikasi" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="650" as="sourcePoint" />
+            <mxPoint x="900" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_26" value="12. Memperbarui status dokumen LPJ menjadi 'DISETUJUI' (DONE)" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="698" as="sourcePoint" />
+            <mxPoint x="1170" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_27" value="13. Menambahkan nominal belanja riil ke dalam kolom total realisasi anggaran" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="746" as="sourcePoint" />
+            <mxPoint x="1170" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_28" value="14. Mengurangi saldo sisa pagu anggaran fakultas sesuai nominal belanja" style="edgeStyle=straight;html=1;strokeColor=#111827;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontColor=#111827;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="794" as="sourcePoint" />
+            <mxPoint x="1170" y="794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_29" value="15. Mengonfirmasi seluruh saldo dan realisasi anggaran telah terekonsiliasi" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="842" as="sourcePoint" />
+            <mxPoint x="900" y="842" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_30" value="16. Mengonfirmasi bahwa pembukuan realisasi belanja telah sukses" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="890" as="sourcePoint" />
+            <mxPoint x="630" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tab8_seq_lpj_31" value="17. Memperbarui rekapitulasi persentase serapan anggaran fakultas secara langsung" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;spacing=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="938" as="sourcePoint" />
+            <mxPoint x="360" y="938" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab9_uc_overview" name="Use Case - Seluruh Sistem (Overview)">
+    <mxGraphModel dx="1178" dy="688" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1160" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab9_uc_overview_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" value="&lt;b&gt;USE CASE DIAGRAM: SELURUH SISTEM (OVERVIEW)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Peta Keseluruhan Interaksi Aktor dengan Fungsionalitas Sistem KASIDOI FATEK UNTAD&lt;/span&gt;" vertex="1">
+          <mxGeometry height="45" width="850" x="50" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_3" parent="1" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" value="&lt;b&gt;SISTEM INFORMASI KEUANGAN KASIDOI (FAKULTAS TEKNIK UNTAD)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="980" width="960" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" value="&lt;b&gt;Unit Kerja&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Prodi / Jurusan&lt;/span&gt;" vertex="1">
+          <mxGeometry height="74" width="38" x="80" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Pengelola Anggaran&lt;/span&gt;" vertex="1">
+          <mxGeometry height="74" width="38" x="80" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_6" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" value="&lt;b&gt;Pimpinan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Dekan / Wadek&lt;/span&gt;" vertex="1">
+          <mxGeometry height="74" width="38" x="1380" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_7" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" value="&lt;b&gt;Layanan Email OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Sistem Sekunder&lt;/span&gt;" vertex="1">
+          <mxGeometry height="74" width="38" x="1380" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Masuk Sistem (Login)" vertex="1">
+          <mxGeometry height="50" width="250" x="330" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Ajukan Usulan RAB Kegiatan" vertex="1">
+          <mxGeometry height="50" width="250" x="330" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Ajukan RPD (Jadwal Tarik Dana)" vertex="1">
+          <mxGeometry height="50" width="250" x="330" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Terima Pencairan Panjar Kas" vertex="1">
+          <mxGeometry height="50" width="250" x="330" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Unggah Berkas Bukti LPJ" vertex="1">
+          <mxGeometry height="50" width="250" x="330" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Pantau Kalender Kas Penarikan" vertex="1">
+          <mxGeometry height="50" width="250" x="330" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Kelola Laporan Anggaran Baru" vertex="1">
+          <mxGeometry height="50" width="260" x="630" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Kelola Revisi Pagu Anggaran" vertex="1">
+          <mxGeometry height="50" width="260" x="630" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Kelola Katalog SBU Produk" vertex="1">
+          <mxGeometry height="50" width="260" x="630" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Susun Struktur RKAKL 7 Level" vertex="1">
+          <mxGeometry height="50" width="260" x="630" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Proses Pencairan Panjar Kas" vertex="1">
+          <mxGeometry height="50" width="260" x="630" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Verifikasi &amp; Validasi LPJ" vertex="1">
+          <mxGeometry height="50" width="260" x="630" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_20" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Pantau Dashboard Serapan Pagu" vertex="1">
+          <mxGeometry height="50" width="260" x="940" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Pantau Realisasi per Unit Kerja" vertex="1">
+          <mxGeometry height="50" width="260" x="940" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_22" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Otorisasi Kode Keamanan OTP" vertex="1">
+          <mxGeometry height="50" width="260" x="940" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_23" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Rekonsiliasi Realisasi Pagu" vertex="1">
+          <mxGeometry height="50" width="260" x="940" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_24" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" value="Pemulihan Kata Sandi Akun" vertex="1">
+          <mxGeometry height="50" width="260" x="940" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_25" edge="1" parent="1" source="tab9_uc_overview_4" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_26" edge="1" parent="1" source="tab9_uc_overview_4" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_27" edge="1" parent="1" source="tab9_uc_overview_4" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_28" edge="1" parent="1" source="tab9_uc_overview_4" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_29" edge="1" parent="1" source="tab9_uc_overview_4" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_30" edge="1" parent="1" source="tab9_uc_overview_4" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_31" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_32" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_33" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_34" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_35" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_36" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_37" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_38" edge="1" parent="1" source="tab9_uc_overview_5" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_39" edge="1" parent="1" source="tab9_uc_overview_6" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_40" edge="1" parent="1" source="tab9_uc_overview_6" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_41" edge="1" parent="1" source="tab9_uc_overview_6" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_42" edge="1" parent="1" source="tab9_uc_overview_6" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_43" edge="1" parent="1" source="tab9_uc_overview_7" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_44" edge="1" parent="1" source="tab9_uc_overview_7" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" target="tab9_uc_overview_24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_45" edge="1" parent="1" source="tab9_uc_overview_18" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" target="tab9_uc_overview_22" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_46" edge="1" parent="1" source="tab9_uc_overview_19" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" target="tab9_uc_overview_23" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab9_uc_overview_47" edge="1" parent="1" source="tab9_uc_overview_8" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" target="tab9_uc_overview_24" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab10_uc_unit" name="Use Case - Aktor Unit Kerja">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab10_uc_unit_2" value="&lt;b&gt;USE CASE DIAGRAM: AKTOR UNIT KERJA&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Diagram Use Case Khusus Aktivitas Pengusulan Anggaran dan Pencairan Kas oleh Unit Kerja&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_3" value="&lt;b&gt;MODUL OPERASIONAL UNIT KERJA (JURUSAN / PRODI / LAB)&lt;/b&gt;" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="700" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_4" value="&lt;b&gt;Unit Kerja&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Pengusul &amp; Pelaksana&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_5" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Penyalur Dana&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="550" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_6" value="Login Akun Unit Kerja" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_7" value="Kelola Profil &amp; Sandi Mandiri" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="220" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_8" value="Buat Usulan Dokumen RAB" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="300" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_9" value="Pilih Kode Rekening Belanja (Lvl 1–7)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="300" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_10" value="Ajukan Rencana Penarikan Dana (RPD)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="390" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_11" value="Periksa Saldo Plafon Sisa Pagu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="390" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_12" value="Terima Kode OTP Pencairan Panjar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="480" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_13" value="Serahkan OTP &amp; Terima Dana Panjar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="480" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_14" value="Unggah Berkas Bukti Belanja (PDF LPJ)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="580" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_15" value="Unggah Ulang LPJ Hasil Koreksi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="580" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_16" value="Pantau Kalender Kas &amp; Notifikasi Jatuh Tempo" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="680" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_17" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_18" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_19" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_20" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_21" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_22" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_23" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_4" target="tab10_uc_unit_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_24" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab10_uc_unit_5" target="tab10_uc_unit_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_25" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab10_uc_unit_8" target="tab10_uc_unit_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_26" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab10_uc_unit_10" target="tab10_uc_unit_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_27" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab10_uc_unit_12" target="tab10_uc_unit_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab10_uc_unit_28" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab10_uc_unit_14" target="tab10_uc_unit_15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab11_uc_keu" name="Use Case - Aktor Staf Keuangan">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1120" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab11_uc_keu_2" value="&lt;b&gt;USE CASE DIAGRAM: AKTOR STAF KEUANGAN&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Diagram Use Case Penatausahaan Anggaran, Pengesahan Belanja, dan Pengawasan Kas Fakultas&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_3" value="&lt;b&gt;MODUL TATA KELOLA KEUANGAN &amp; ANGGARAN FAKULTAS&lt;/b&gt;" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="720" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_4" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Admin &amp; Bendahara&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_5" value="&lt;b&gt;Layanan Email OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Pengirim OTP&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="620" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_6" value="Inisialisasi Laporan Anggaran Baru" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="140" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_7" value="Kelola Perubahan Pagu Revisi (BOPTN/BLU)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_8" value="Kelola Katalog SBU Produk Acuan" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_9" value="Susun Pohon Anggaran RKAKL (Lvl 1–6)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_10" value="Buat Item Belanja (Lvl 7) Terhubung SBU" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="670" y="380" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_11" value="Verifikasi Permohonan RPD Masuk" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="480" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_12" value="Proses Pencairan Panjar Kas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="570" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_13" value="Picu Pengiriman Kode OTP Otorisasi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="670" y="570" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_14" value="Cetak Kuitansi &amp; Tanda Terima Panjar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="670" y="660" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_15" value="Periksa Berkas &amp; Bukti Kuitansi LPJ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="760" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_16" value="Putuskan Status LPJ (DISETUJUI / DITOLAK)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="670" y="760" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_17" value="Rekonsiliasi Otomatis Serapan Pagu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="670" y="850" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_18" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_19" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_20" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_21" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_22" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_23" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_24" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_4" target="tab11_uc_keu_15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_25" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab11_uc_keu_5" target="tab11_uc_keu_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_26" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab11_uc_keu_9" target="tab11_uc_keu_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_27" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab11_uc_keu_12" target="tab11_uc_keu_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_28" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab11_uc_keu_12" target="tab11_uc_keu_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_29" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab11_uc_keu_15" target="tab11_uc_keu_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab11_uc_keu_30" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab11_uc_keu_16" target="tab11_uc_keu_17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab12_uc_pim" name="Use Case - Aktor Pimpinan">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab12_uc_pim_2" value="&lt;b&gt;USE CASE DIAGRAM: AKTOR PIMPINAN&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Diagram Use Case Pengawasan Eksekutif terhadap Serapan dan Realisasi Anggaran Fakultas&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_3" value="&lt;b&gt;MODUL MONITORING &amp; EKSEKUTIF PIMPINAN FAKULTAS&lt;/b&gt;" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="650" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_4" value="&lt;b&gt;Pimpinan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Dekan / Wakil Dekan&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="340" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_5" value="Login Akun Eksekutif Pimpinan" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="140" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_6" value="Pantau Plafon &amp; Sisa Pagu Fakultas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="220" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_7" value="Pantau Komposisi Dana (BOPTN vs BLU)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="300" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_8" value="Pantau Kinerja Serapan per Jurusan/Prodi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="390" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_9" value="Pantau Agenda Kalender Kas Penarikan Dana" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="480" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_10" value="Tinjau Rekapitulasi Laporan Realisasi Tahunan" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="570" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_11" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab12_uc_pim_4" target="tab12_uc_pim_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_12" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab12_uc_pim_4" target="tab12_uc_pim_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_13" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab12_uc_pim_4" target="tab12_uc_pim_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_14" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab12_uc_pim_4" target="tab12_uc_pim_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_15" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab12_uc_pim_4" target="tab12_uc_pim_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab12_uc_pim_16" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab12_uc_pim_4" target="tab12_uc_pim_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab13_uc_plan" name="Use Case - Modul Perencanaan &amp; RKAKL">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab13_uc_plan_2" value="&lt;b&gt;USE CASE DIAGRAM: MODUL PERENCANAAN &amp; RKAKL&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Detail Paket Fungsionalitas Pembentukan Pagu, Struktur Rekening 7 Level, dan Pengajuan RAB&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_3" value="&lt;b&gt;PAKET PERENCANAAN ANGGARAN &amp; POHON REKENING RKAKL&lt;/b&gt;" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="720" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_4" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Perencana Utama&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="340" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_5" value="&lt;b&gt;Unit Kerja&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Pengusul Usulan&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="520" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_6" value="Buat Laporan Anggaran Baru" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="140" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_7" value="Tetapkan Pagu Awal BOPTN &amp; BLU" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="140" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_8" value="Lakukan Penyesuaian Pagu Revisi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="230" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_9" value="Kelola Katalog Standar SBU Produk" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="320" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_10" value="Susun Struktur Berjenjang (Level 1–6)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="420" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_11" value="Definisikan Rincian Akun Belanja (Level 7)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="420" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_12" value="Hitung Otomatis (Volume x Harga SBU)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="510" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_13" value="Buat Usulan Rencana Kegiatan (RAB)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="620" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_14" value="Tautkan Rekening Belanja ke Dokumen RAB" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="620" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_15" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab13_uc_plan_4" target="tab13_uc_plan_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_16" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab13_uc_plan_4" target="tab13_uc_plan_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_17" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab13_uc_plan_4" target="tab13_uc_plan_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_18" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab13_uc_plan_5" target="tab13_uc_plan_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_19" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab13_uc_plan_6" target="tab13_uc_plan_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_20" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab13_uc_plan_6" target="tab13_uc_plan_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_21" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab13_uc_plan_10" target="tab13_uc_plan_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_22" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab13_uc_plan_11" target="tab13_uc_plan_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab13_uc_plan_23" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab13_uc_plan_13" target="tab13_uc_plan_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab14_uc_trx" name="Use Case - Modul Transaksi &amp; Pencairan Kas">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab14_uc_trx_2" value="&lt;b&gt;USE CASE DIAGRAM: MODUL TRANSAKSI &amp; PENCAIRAN KAS&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Detail Paket Fungsionalitas Perencanaan Tarik Dana (RPD) dan Otorisasi Panjar Berbasis OTP&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_3" value="&lt;b&gt;PAKET PENARIKAN DANA (RPD) &amp; PENCAIRAN PANJAR KAS&lt;/b&gt;" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="720" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_4" value="&lt;b&gt;Unit Kerja&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Pemohon Kas&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_5" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Bendahara Kas&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_6" value="&lt;b&gt;Layanan Email OTP&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Sistem Sekunder&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_7" value="Pilih Sub Komponen (Lvl 6) Kegiatan" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="140" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_8" value="Periksa Batas Maksimal Saldo Pagu" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="140" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_9" value="Ajukan Jadwal &amp; Nominal Tarik RPD" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="230" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_10" value="Sinkronisasi Agenda Kalender Kas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="230" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_11" value="Kirim Peringatan Jatuh Tempo Tarik Dana" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="320" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_12" value="Proses Permohonan Pencairan Panjar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="450" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_13" value="Terbitkan &amp; Kirim 6-Digit OTP Email" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="450" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_14" value="Verifikasi Kode OTP di Loket Kasir" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="560" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_15" value="Catat Pengeluaran Kas Panjar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="560" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_16" value="Cetak Kuitansi Tanda Terima Panjar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="660" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_17" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab14_uc_trx_4" target="tab14_uc_trx_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_18" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab14_uc_trx_4" target="tab14_uc_trx_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_19" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab14_uc_trx_5" target="tab14_uc_trx_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_20" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab14_uc_trx_5" target="tab14_uc_trx_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_21" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab14_uc_trx_6" target="tab14_uc_trx_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_22" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab14_uc_trx_7" target="tab14_uc_trx_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_23" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab14_uc_trx_9" target="tab14_uc_trx_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_24" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab14_uc_trx_10" target="tab14_uc_trx_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_25" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab14_uc_trx_12" target="tab14_uc_trx_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_26" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab14_uc_trx_14" target="tab14_uc_trx_15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab14_uc_trx_27" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab14_uc_trx_15" target="tab14_uc_trx_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tab15_uc_lpj" name="Use Case - Modul Pertanggungjawaban (LPJ)">
+    <mxGraphModel dx="1200" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tab15_uc_lpj_2" value="&lt;b&gt;USE CASE DIAGRAM: MODUL PERTANGGUNGJAWABAN (LPJ)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:11px;color:#4B5563;&quot;&gt;Detail Paket Fungsionalitas Pengunggahan Bukti Kuitansi, Verifikasi, dan Rekonsiliasi Serapan Dana&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="850" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_3" value="&lt;b&gt;PAKET PERTANGGUNGJAWABAN (LPJ) &amp; REALISASI ANGGARAN&lt;/b&gt;" style="rounded=1;arcSize=4;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.5;fontColor=#111827;fontStyle=1;fontSize=12;verticalAlign=top;align=left;spacingLeft=18;spacingTop=12;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="80" width="720" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_4" value="&lt;b&gt;Unit Kerja&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Pelaksana Kegiatan&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_5" value="&lt;b&gt;Staf Keuangan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size:9px;color:#4B5563;&quot;&gt;Verifikator Berkas&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#111827;strokeColor=#111827;fontColor=#111827;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="38" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_6" value="Pilih Kegiatan RPD yang Telah Cair" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="140" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_7" value="Unggah Berkas Kuitansi &amp; Bukti PDF" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="230" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_8" value="Input Nominal Realisasi Belanja Riil" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="230" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_9" value="Simpan Berkas Status MENUNGGU VERIFIKASI" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="340" width="290" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_10" value="Periksa Keabsahan Fisik Kuitansi LPJ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="430" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_11" value="Tolak Berkas (Status DITOLAK / DECLINE)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="520" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_12" value="Unggah Ulang Bukti Revisi Perbaikan" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="520" width="270" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_13" value="Sahkan LPJ (Status DISETUJUI / DONE)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="620" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_14" value="Rekonsiliasi Realisasi Belanja &amp; Saldo" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="680" y="710" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_15" value="Update Persentase Serapan Dana Fakultas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.5;fontColor=#111827;fontSize=11;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="710" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_16" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab15_uc_lpj_4" target="tab15_uc_lpj_6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_17" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab15_uc_lpj_4" target="tab15_uc_lpj_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_18" value="" style="edgeStyle=straight;html=1;strokeColor=#374151;strokeWidth=1.5;endArrow=none;html=1;" edge="1" parent="1" source="tab15_uc_lpj_5" target="tab15_uc_lpj_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_19" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_7" target="tab15_uc_lpj_8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_20" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_7" target="tab15_uc_lpj_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_21" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_10" target="tab15_uc_lpj_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_22" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_11" target="tab15_uc_lpj_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_23" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_10" target="tab15_uc_lpj_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_24" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_13" target="tab15_uc_lpj_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tab15_uc_lpj_25" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=straight;html=1;strokeColor=#4B5563;strokeWidth=1.2;dashed=1;endArrow=open;fontSize=10;fontColor=#374151;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="tab15_uc_lpj_14" target="tab15_uc_lpj_15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
