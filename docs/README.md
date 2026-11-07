@@ -8,6 +8,7 @@ Folder ini berisi seluruh panduan proses bisnis, kamus istilah, arsitektur datab
 
 | Dokumen | Deskripsi |
 | :--- | :--- |
+| 🧪 **[PANDUAN_TESTING_MANUAL_DAN_FITUR.md](./PANDUAN_TESTING_MANUAL_DAN_FITUR.md)** | **Buku Panduan Testing Manual & Business Flow**: Panduan langkah demi langkah pengujian manual end-to-end, akun uji siap pakai, breakdown fitur, dan checklist hasil yang diharapkan. |
 | 📊 **[diagram-kasidoi.drawio](./diagram-kasidoi.drawio)** | **Diagram Lengkap Sistem (Draw.io)**: File Draw.io multi-tab yang memuat 15 tab diagram arsitektur: ERD database (17 tabel lengkap PK/FK, grouped & monokrom), 7 Sequence Diagram alur bisnis non-teknis, dan 7 Use Case Diagram (Overview sistem, per aktor, dan per modul transaksi). |
 | 📌 **[ALUR_DISTRIBUSI_ANGGARAN.md](./ALUR_DISTRIBUSI_ANGGARAN.md)** | **Alur Distribusi & Proses Bisnis End-to-End**: Menjelaskan bagaimana dana dari Total Pagu Fakultas mengalir ke Jurusan/Lab, lengkap dengan teks narasi dan pemetaan penyimpanan data ke tabel/kolom database. |
 | 🌳 **[contoh_kasus_pohon_anggaran.md](./contoh_kasus_pohon_anggaran.md)** | **Studi Kasus Pohon Anggaran Kampus**: Contoh riil penganggaran Lab Jaringan & Sertifikasi Mahasiswa Teknik Informatika (Pagu Rp 150 Juta) dengan visualisasi diagram hierarki Mermaid. |

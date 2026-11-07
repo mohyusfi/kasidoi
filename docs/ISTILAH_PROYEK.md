@@ -48,6 +48,10 @@ Sistem ini memakai nomor kode pos anggaran bertingkat dari Level 1 (paling umum)
 
 ## 3. Rencana & Pengajuan Dana
 
+### 📌 RKAKL / RKAL (Rencana Kerja dan Anggaran Kementerian Negara/Lembaga)
+* **Artinya**: Dokumen rencana kerja dan keuangan tahunan resmi yang memuat alokasi program kerja serta susunan pos anggaran (pohon rekening Level 1 s/d 7). Di aplikasi web Kasidoi, ini dapat diakses melalui menu **RKAKL** (`/laporan`).
+* **Analogi**: Buku catatan rencana belanja tahunan keluarga. Berisi rincian uang pagu mau dipakai untuk apa saja sepanjang tahun secara terstruktur.
+
 ### 📌 RAB (Rencana Anggaran Biaya)
 * **Artinya**: Dokumen rencana daftar perkiraan barang apa saja yang mau dibeli beserta biayanya sebelum kegiatan dimulai.
 * **Analogi**: Catatan daftar belanjaan sebelum pergi ke supermarket.
@@ -78,7 +82,7 @@ Sistem ini memakai nomor kode pos anggaran bertingkat dari Level 1 (paling umum)
 ```
 Pagu Ditetapkan (BLU & BOPTN)
          ↓
-Pohon Anggaran Dibuat (Level 1 s/d 7)
+Susun RKAKL & Pohon Anggaran (Level 1 s/d 7)
          ↓
 Buat RAB & Rencana Pengeluaran (Kode Uang Master)
          ↓
